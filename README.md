@@ -210,6 +210,7 @@ project-folder/
 ├── model_comparison.png
 ├── confusion_matrices.png
 └── model/
+    ├── Model_Training.ipynb        # copy, so model/ holds the code with the models
     ├── results.csv                 # metrics table driving the app
     ├── dataset_info.md             # dataset panel shown inside the app
     ├── logistic_regression.pkl
@@ -234,6 +235,12 @@ streamlit run app.py
 Then upload `test_data.csv` when the browser opens. Running
 `Model_Training.ipynb` from top to bottom rebuilds everything: the six
 pipelines, `results.csv`, the test split and both figures.
+
+The notebook appears twice on purpose. `model/` carries a copy so the folder
+holds the saved models together with the code that produced them, matching the
+structure the assignment asks for. Run the copy at the repository root — its
+paths are relative to the root, writing the pipelines into `model/` and the test
+split and figures beside itself.
 
 **Environment:** Python 3.12.10, scikit-learn 1.9.0, pandas 3.0.5, numpy 2.5.2,
 Streamlit 1.61.1, matplotlib 3.11.1. Everything reproduces with
